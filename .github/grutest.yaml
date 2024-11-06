@@ -8,6 +8,8 @@ pipeline:
       - npx vitest run {{testFilePath}}
 settings:
   exportFunctionOrClass: allow
+  codeModels:
+    - gpt-4o
   testPlacementStrategies:
     - type: co-located
       testFilePattern: "{{sourceFileName}}.spec.ts"
